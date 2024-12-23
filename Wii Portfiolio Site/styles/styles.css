@@ -1,0 +1,38 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #d0e7f9; /* Soft Nintendo-like blue */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+/* Wii Pointer Cursor */
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+/* Add a custom cursor element */
+.custom-pointer {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: url('../assets/images/p1Pointer.png') no-repeat center; /* Relative path to the image */
+    background-size: contain;
+    pointer-events: none; /* Makes sure it doesn’t block clicks */
+    z-index: 1000;
+}

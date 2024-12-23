@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wii Pointer</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>Welcome to... this website!</h1>
+    <p>This is currently being used to test the cursor. Stay tuned!</p>
+
+    <script>
+        // Create the custom pointer element
+        const pointer = document.createElement('div');
+        pointer.classList.add('custom-pointer');
+        document.body.appendChild(pointer);
+
+        // Update the position of the pointer
+        document.addEventListener('mousemove', (e) => {
+            pointer.style.left = `${e.pageX}px`;
+            pointer.style.top = `${e.pageY}px`;
+        });
+    </script>
+</body>
+</html>
